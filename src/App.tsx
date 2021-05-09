@@ -9,6 +9,7 @@ import {
 import Dashboard from './dashboard/Dashboard';
 import Home from './Home';
 import NavigationBar from './common/NavigationBar';
+import Wizard from './dashboard/Wizard';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/dashboard" exact component={Dashboard} />
+          <Route path="/wizard" exact component={Wizard} />
           <Route path="/" exact component={Home} />
         </Switch>
       </Router>
