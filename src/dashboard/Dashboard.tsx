@@ -1,22 +1,24 @@
 import React from "react";
 import logo from "./logo.svg";
+import './Dashboard.css';
 
 export function Dashboard() {
   return (
-    <div className="container">
-      <div className="container">
-        <section className="hero is-primary">
-          <div className="hero-body">
-            <p className="title">Welcome, you crazy scientist!</p>
-            <p className="subtitle">
-              Here's an overview of all of your current experiments.
-            </p>
-          </div>
-        </section>
-      </div>
+    <div className="container block">
+      <section className="hero is-primary">
+        <div className="hero-body">
+          <p className="title">Welcome, you crazy scientist!</p>
+          <p className="subtitle">
+            Here's an overview of all of your current experiments.
+          </p>
+        </div>
+      </section>
 
-      <div className="columns">
-        <div className="card column">
+      <h1 className="is-size-3">Experiments</h1>
+      <br></br>
+
+      <div className="block columns">
+        <div className="card column block">
           <div className="card-content">
             <div className="media">
               <div className="media-left">
@@ -40,6 +42,11 @@ export function Dashboard() {
               <br />
               <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
             </div>
+          </div>
+        </div>
+        <div className="card column block">
+          <div className="card-content">
+            <a className="subtitle is-3 is-spaced" href="/wizard">Create new experiment</a>
           </div>
         </div>
 
