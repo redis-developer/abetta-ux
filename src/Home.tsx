@@ -15,7 +15,7 @@ export function Home() {
         <p>
             ABetta-Me App
         </p>
-        <Link to="/dashboard">Login</Link>
+        <a href="http://localhost:8080/oauth2/authorization/google">Login</a>
         </header>
     </div>
   );
