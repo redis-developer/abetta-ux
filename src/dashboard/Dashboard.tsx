@@ -1,5 +1,3 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./Dashboard.css";
 import getExperiments from "../mock-services/ExperimentService";
 

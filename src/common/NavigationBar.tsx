@@ -1,12 +1,3 @@
-import React from 'react';
-import logo from './logo.svg';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
-
 export function NavigationBar() {
   return (
 <nav className="navbar" role="navigation" aria-label="main navigation">
