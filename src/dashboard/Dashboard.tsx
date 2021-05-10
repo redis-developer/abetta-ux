@@ -1,7 +1,8 @@
 import "./Dashboard.css";
-import {default as getExperiments, Experiment} from "../mock-services/ExperimentService";
+import {default as getExperiments } from "../mock-services/ExperimentService";
 import ExperimentDetails from "./ExperimentDetails";
 import React from "react";
+import { Experiment } from "../contract/Experiment";
 
 interface IProps {
 }
@@ -60,12 +61,6 @@ class Dashboard extends React.Component<IProps, IState> {
                         <p className="title is-4">{exp.name}</p>
                       </div>
                     </div>
-  
-                    {/* <div className="content">
-                      {exp.description}
-                      <br />
-                      <time>{exp.dateCreated.toUTCString()}</time>
-                    </div> */}
                   </div>
                 </div>
               ))}

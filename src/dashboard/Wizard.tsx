@@ -1,4 +1,8 @@
+import getMetrics from "../mock-services/MetricService";
+
 export function Wizard() {
+  let metrics = getMetrics();
+
   return (
     <div className="container">
       <section className="hero is-info">
@@ -34,8 +38,9 @@ export function Wizard() {
         <label className="label">Metric</label>
         <div className="select">
           <select>
-            <option>Weight</option>
-            <option>Mood</option>
+            {metrics.map(metric => (
+              <option>{metric.name}</option>
+            ))}
           </select>
         </div>
       </div>
