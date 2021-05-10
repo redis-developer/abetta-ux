@@ -30,7 +30,12 @@ export function ExperimentDetails(props: any) {
     <div className="card">
       <div className="card-content">
         <div className="content">
-          <h2>{experiment.name} <button className="button is-right is-small is-danger is-outlined">Add metric</button></h2>
+          <h2>
+            {experiment.name}{" "}
+            <button className="button is-right is-small is-danger is-outlined">
+              Add metric
+            </button>
+          </h2>
           <h5>{experiment.dateCreated.toUTCString()}</h5>
           <p>{experiment.description}</p>
 
@@ -65,6 +70,20 @@ export function ExperimentDetails(props: any) {
           )}
 
           <h5>Insights</h5>
+          <div className="modal">
+            <div className="modal-background"></div>
+            <div className="modal-card">
+              <header className="modal-card-head">
+                <p className="modal-card-title">Modal title</p>
+                <button className="delete" aria-label="close"></button>
+              </header>
+              <section className="modal-card-body">Hey! </section>
+              <footer className="modal-card-foot">
+                <button className="button is-success">Save changes</button>
+                <button className="button">Cancel</button>
+              </footer>
+            </div>
+          </div>
         </div>
       </div>
     </div>
