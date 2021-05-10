@@ -1,7 +1,8 @@
-interface Experiment {
+export interface Experiment {
     name: string;
     dateCreated: Date;
     description: string;
+    isSelected?: boolean;
 }
 export default function getExperiments(): Experiment[] {
     let experiments: Experiment[] = [];

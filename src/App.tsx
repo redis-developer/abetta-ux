@@ -13,13 +13,15 @@ function App() {
   return (
     <div>
       <NavigationBar />
-      <Router>
-        <Switch>
-          <Route path="/dashboard" exact component={Dashboard} />
-          <Route path="/wizard" exact component={Wizard} />
-          <Route path="/" exact component={Home} />
-        </Switch>
-      </Router>
+      <div className="main-content">
+        <Router>
+          <Switch>
+            <Route path="/dashboard" exact component={Dashboard} />
+            <Route path="/wizard" exact component={Wizard} />
+            <Route path="/" exact component={Home} />
+          </Switch>
+        </Router>
+      </div>
     </div>
   );
 }
