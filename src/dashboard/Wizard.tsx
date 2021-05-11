@@ -1,10 +1,24 @@
 import getMetrics from "../mock-services/MetricService";
+import Lottie from "react-lottie";
+import animationData from "../lottie/track.json";
 
 export function Wizard() {
   let metrics = getMetrics();
-
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData
+  };
   return (
     <div className="container">
+      <div style={{float:"left", minHeight: "140px", minWidth: 140}}>
+        <Lottie
+          options={defaultOptions}
+          height={140}
+          width={140}
+          isClickToPauseDisabled={true}
+        />
+      </div>
       <section className="hero is-info">
         <div className="hero-body">
           <p className="title">Creating a new experiment</p>
@@ -28,9 +42,11 @@ export function Wizard() {
       <div className="field">
         <label className="label">Description</label>
         <div className="control">
-        <input
+          <input
             className="input"
-            type="text" placeholder="What are you experimenting with?"></input>
+            type="text"
+            placeholder="What are you experimenting with?"
+          ></input>
         </div>
       </div>
 
@@ -38,7 +54,7 @@ export function Wizard() {
         <label className="label">Metric</label>
         <div className="select">
           <select>
-            {metrics.map(metric => (
+            {metrics.map((metric) => (
               <option>{metric.name}</option>
             ))}
           </select>
@@ -74,10 +90,14 @@ export function Wizard() {
 
       <div className="field is-grouped">
         <div className="control">
-          <a href="/dashboard"><button className="button is-link">Create</button></a>
+          <a href="/dashboard">
+            <button className="button is-link">Create</button>
+          </a>
         </div>
         <div className="control">
-        <a href="/dashboard"><button className="button is-link is-light">Cancel</button></a>
+          <a href="/dashboard">
+            <button className="button is-link is-light">Cancel</button>
+          </a>
         </div>
       </div>
     </div>
