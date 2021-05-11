@@ -7,14 +7,15 @@ export class AuthenticationService {
 	  }
 
 	async  authenticateWithGoogle() {
-		await axios.get("http://localhost:8080/oauth2/authorization/google", {
-			withCredentials: true
+		await axios.get("https://abetta-backend.herokuapp.com/login", {
+			headers: {}
+			// withCredentials: true
 		});
 	}
 
 	async testCall() {
-		await axios.get("http://localhost:8080/something", {
-			withCredentials: true
+		await axios.get("https://abetta-backend.herokuapp.com/something", {
+			// withCredentials: true
 		});
 	}
 }

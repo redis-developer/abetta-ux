@@ -5,16 +5,14 @@ export function Home() {
   const authService = new AuthenticationService();
 
   const testing = async () => {
-	  await authService.testCall();
-	  alert("Hey");
+	  await authService.testCall().then(r => alert(r));
+	  alert("Hey"); 
   };
 
   const authTest = async () => {
-	await authService.authenticateWithGoogle();
+	await authService.authenticateWithGoogle().then(r => alert(r));
 	alert("Hey");
   };	
-
-
 
   return (
 
@@ -23,7 +21,7 @@ export function Home() {
         <p>
             ABetta-Me App
         </p>
-        <a href="http://localhost:8080/oauth2/authorization/google">Login</a>
+        <a href="https://abetta-backend.herokuapp.com/oauth2/authorization/google">Login</a>
 		<a onClick={authTest}>Login axios</a>
 		<a onClick={testing}>Test</a>
         </header>
