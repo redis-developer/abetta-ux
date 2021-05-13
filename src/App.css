@@ -30,7 +30,7 @@
   }
 }
 
-.main-content * {
+.main-content, .card {
   transition: box-shadow 0.5s ease-in;
   animation: fadeIn cubic-bezier(0.075, 0.82, 0.165, 1) 0.8s;
 }

@@ -5,6 +5,7 @@ import React from "react";
 import { Experiment } from "../contract/Experiment";
 import Lottie from "react-lottie";
 import animationData from "../lottie/hosting.json";
+import { Link } from "react-router-dom";
 
 interface IProps {}
 
@@ -38,7 +39,7 @@ class Dashboard extends React.Component<IProps, IState> {
     };
     return (
       <div className="container block">
-        <div style={{ float:"left", minHeight: "120px", minWidth: 120 }}>
+        <div style={{ float: "left", minHeight: "120px", minWidth: 120 }}>
           <Lottie
             options={defaultOptions}
             height={120}
@@ -55,19 +56,27 @@ class Dashboard extends React.Component<IProps, IState> {
           </div>
         </section>
 
-        <h1 className="is-size-3">Experiments</h1>
+        <div>
+        <h1 className="is-size-3">
+          Experiments 
+          <Link
+            to={{
+              pathname: "/wizard",
+              state: this.state,
+            }}
+            className="button is-right is-outlined"
+            style={{marginLeft: 20}}
+          >
+            Create new experiment
+          </Link>
+          </h1>
+        </div>
         <br></br>
 
         <div className="block is-mobile">
           <div className="columns">
             <div className="column is-one-quarter">
-              <div className="card primary column block">
-                <div className="card-content">
-                  <a className="subtitle is-5 is-spaced" href="/wizard">
-                    Create new experiment
-                  </a>
-                </div>
-              </div>
+              
               {this._experiments.map((exp, index) => (
                 <div
                   className={`card column block ${
