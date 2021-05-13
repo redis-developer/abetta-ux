@@ -105,20 +105,25 @@ export class ExperimentDetails extends React.Component<IProps, IState> {
               )}
 
             <h5>Insights</h5>
-            <div className="modal">
-              <div className="modal-background"></div>
-              <div className="modal-card">
-                <header className="modal-card-head">
-                  <p className="modal-card-title">Modal title</p>
-                  <button className="delete" aria-label="close"></button>
-                </header>
-                <section className="modal-card-body">Hey! </section>
-                <footer className="modal-card-foot">
-                  <button className="button is-success">Save changes</button>
-                  <button className="button">Cancel</button>
-                </footer>
+            
+        <div className="field">
+          {
+            this.state.experiment?.recommendations?.map(x => (
+            <nav className="panel">
+              <p className="panel-heading">{x.explanation}</p>
+              <div className="panel-block">
+                Average value in Treatment: {x.avgTreatment}
               </div>
-            </div>
+              <div className="panel-block">
+                Average value in Control: {x.avgControl}
+              </div>
+              <div className="panel-block">
+                p-Value: {x.pValue}
+              </div>
+            </nav>
+          ))}
+        </div>
+            
           </div>
         </div>
       </div>

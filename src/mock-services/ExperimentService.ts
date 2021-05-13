@@ -34,8 +34,16 @@ export default function getExperiments(): Experiment[] {
     treatmentDescription: "Don't be yourself",
     dateCreated: new Date(),
     metricsTreatment: [weightMetric],
-    metricsControl: [weightMetricControl]
-  });
+    metricsControl: [weightMetricControl],
+    recommendations: [
+      {
+        explanation: "Congratulations, you won - you're awesome!",
+        avgControl: 87,
+        avgTreatment: 82,
+        pValue: 0.01
+      }
+    ]
+  } as Experiment);
   experiments.push({
     id: "2",
     name: "Getting a life",

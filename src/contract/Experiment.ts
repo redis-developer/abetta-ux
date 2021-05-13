@@ -1,4 +1,5 @@
 import Metric from "./Metric";
+import Recommendation from "./Recommendation";
 
 export interface Experiment {
     id: string;
@@ -12,6 +13,7 @@ export interface Experiment {
     isSelected?: boolean;
     metricsControl?: Metric[];
     metricsTreatment?: Metric[];
+    recommendations?: Recommendation[];
 }
 
 export enum Status {

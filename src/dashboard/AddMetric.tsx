@@ -8,12 +8,14 @@ interface IProps {
 interface IState {
   experiment?: Experiment;
   isForControl: boolean;
+  isActive: boolean;
 }
 
 class AddMetric extends React.Component<IProps, IState> {
   state: IState = {
     experiment: undefined,
-    isForControl: false
+    isForControl: false,
+    isActive: false
   };
 
   componentDidMount() {
@@ -25,7 +27,8 @@ class AddMetric extends React.Component<IProps, IState> {
   setMetricTo(destination: "Treatment" | "Control"): void {
     this.setState(() => ({
       experiment: this.state.experiment,
-      isForControl: destination == "Control"
+      isForControl: destination == "Control",
+      isActive: this.state.isActive
     }))
   }
 
