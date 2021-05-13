@@ -20,8 +20,6 @@ interface IProps {
 }
 
 interface IState {
-  experiment?: Experiment;
-  isActive: boolean;
 }
 
 function transformMetricToGraph(metricsTreatment: Metric[] = []): any[] {
@@ -41,12 +39,6 @@ function transformMetricToGraph(metricsTreatment: Metric[] = []): any[] {
 export class ExperimentDetails extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
-    this.state = { experiment: props.experiment ?? {
-      id: "",
-      name: "",
-      description: "",
-      dateCreated: new Date()
-    }, isActive: false };
   }
 
   render() {
@@ -55,33 +47,33 @@ export class ExperimentDetails extends React.Component<IProps, IState> {
         <div className="card-content">
           <div className="content">
             <h2>
-              {this.state.experiment?.name}{" "}
+              {this.props.experiment?.name}{" "}
               <Link
                 to={{
                   pathname: "/addMetric",
-                  state: this.state
+                  state: this.props.experiment
                 }}
                 className="button is-right is-small is-danger is-outlined"
               >
                 Add metric
               </Link>
             </h2>
-            <h5>{this.state.experiment?.dateCreated.toUTCString()}</h5>
-            <p>{this.state.experiment?.description}</p>
+            <h5>{this.props.experiment?.dateCreated.toUTCString()}</h5>
+            <p>{this.props.experiment?.description}</p>
 
             <div className="columns">
               <div className="column">
                 <h5>Treatment</h5>
-                {this.state.experiment?.treatmentDescription}
+                {this.props.experiment?.treatmentDescription}
               </div>
               <div className="column">
                 <h5>Control</h5>
-                {this.state.experiment?.controlDescription}
+                {this.props.experiment?.controlDescription}
               </div>
             </div>
 
-            {!!this.state.experiment?.metricsControl &&
-              !!this.state.experiment.metricsTreatment && (
+            {!!this.props.experiment?.metricsControl &&
+              !!this.props.experiment.metricsTreatment && (
                 <div className="graph">
                   <XYPlot xType="ordinal" width={850} height={250}>
                     <HorizontalGridLines />
@@ -89,13 +81,13 @@ export class ExperimentDetails extends React.Component<IProps, IState> {
                     <LineMarkSeries
                       curve={"curveMonotoneX"}
                       data={transformMetricToGraph(
-                        this.state.experiment.metricsTreatment
+                        this.props.experiment.metricsTreatment
                       )}
                     />
                     <LineMarkSeries
                       curve={"curveMonotoneX"}
                       data={transformMetricToGraph(
-                        this.state.experiment.metricsControl
+                        this.props.experiment.metricsControl
                       )}
                     />
                     <XAxis />
@@ -108,7 +100,7 @@ export class ExperimentDetails extends React.Component<IProps, IState> {
             
         <div className="field">
           {
-            this.state.experiment?.recommendations?.map(x => (
+            this.props.experiment?.recommendations?.map(x => (
             <nav className="panel">
               <p className="panel-heading">{x.explanation}</p>
               <div className="panel-block">

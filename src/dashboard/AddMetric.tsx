@@ -20,7 +20,7 @@ class AddMetric extends React.Component<IProps, IState> {
 
   componentDidMount() {
     this.setState(() => ({
-      experiment: (this.props as any).location.state.experiment,
+      experiment: (this.props as any).location.state,
     }));
   }
 
