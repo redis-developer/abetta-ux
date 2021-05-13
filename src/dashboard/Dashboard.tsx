@@ -1,6 +1,6 @@
 import "./Dashboard.css";
 import { default as getExperiments } from "../mock-services/ExperimentService";
-import ExperimentDetails from "./ExperimentDetails";
+import { ExperimentDetails } from "./ExperimentDetails";
 import React from "react";
 import { Experiment } from "../contract/Experiment";
 import Lottie from "react-lottie";

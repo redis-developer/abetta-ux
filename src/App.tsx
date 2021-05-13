@@ -8,6 +8,7 @@ import Dashboard from './dashboard/Dashboard';
 import Home from './Home';
 import NavigationBar from './common/NavigationBar';
 import Wizard from './dashboard/Wizard';
+import AddMetric from './dashboard/AddMetric';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Switch>
             <Route path="/dashboard" exact component={Dashboard} />
             <Route path="/wizard" exact component={Wizard} />
+            <Route path="/addMetric" exact component={AddMetric} />
             <Route path="/" exact component={Home} />
           </Switch>
         </Router>
