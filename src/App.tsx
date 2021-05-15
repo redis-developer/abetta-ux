@@ -9,6 +9,7 @@ import Home from './Home';
 import NavigationBar from './common/NavigationBar';
 import Wizard from './dashboard/Wizard';
 import AddMetric from './dashboard/AddMetric';
+import HelpPage from './help/HelpPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Router>
           <Switch>
             <Route path="/dashboard" exact component={Dashboard} />
+            <Route path="/help" exact component={HelpPage} />
             <Route path="/wizard" exact component={Wizard} />
             <Route path="/addMetric" exact component={AddMetric} />
             <Route path="/" exact component={Home} />

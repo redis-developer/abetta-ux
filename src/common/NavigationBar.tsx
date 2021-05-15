@@ -13,7 +13,7 @@ export function NavigationBar() {
         Dashboard
       </a>
 
-      <a href="/dashboard" className="navbar-item">
+      <a href="/help" className="navbar-item">
         Help
       </a>
 
