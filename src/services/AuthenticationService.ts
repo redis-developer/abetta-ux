@@ -17,4 +17,10 @@ export class AuthenticationService {
 			withCredentials: true
 		});
 	}
+
+	async xpCall() {
+		await axios.get("http://localhost:8080/abetta-xp/v1/experiments", {
+			withCredentials: true
+		});
+	}
 }

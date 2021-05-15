@@ -4,7 +4,7 @@ import Recommendation from "./Recommendation";
 export interface Experiment {
     id: string;
     name: string;
-    dateCreated: Date;
+    dateCreated?: Date;
     description: string;
     controlDescription?: string;
     treatmentDescription?: string;

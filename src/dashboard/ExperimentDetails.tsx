@@ -58,7 +58,7 @@ export class ExperimentDetails extends React.Component<IProps, IState> {
                 Add metric
               </Link>
             </h2>
-            <h5>{this.props.experiment?.dateCreated.toUTCString()}</h5>
+            <h5>{this.props.experiment?.dateCreated?.toUTCString()}</h5>
             <p>{this.props.experiment?.description}</p>
 
             <div className="columns">
