@@ -26,9 +26,15 @@ function transformMetricToGraph(metricsTreatment: Metric[] = []): any[] {
   let graphData: any[] = [];
   let dateTimeFormat = Intl.DateTimeFormat("en");
   if (metricsTreatment.length > 0 && metricsTreatment[0] != undefined) {
-    metricsTreatment[0].values.forEach((value) => {
+	let values = metricsTreatment[0].metricValues.sort((a, b) => {
+		let dateA = new Date(a.dateRecorded);
+		let dateB = new Date(b.dateRecorded);
+		
+		return dateA.getDate() - dateB.getDate();
+	}); 
+    values.forEach((value) => {
       graphData.push({
-        x: dateTimeFormat.format(value.date),
+        x: dateTimeFormat.format(new Date((value.dateRecorded as any))),
         y: value.value,
       });
     });
@@ -59,12 +65,11 @@ export class ExperimentDetails extends React.Component<IProps, IState> {
               </Link>
             </h2>
             <h5>{this.props.experiment?.dateCreated?.toUTCString()}</h5>
-            <p>{this.props.experiment?.description}</p>
 
             <div className="columns">
               <div className="column">
                 <h5>Treatment</h5>
-                {this.props.experiment?.treatmentDescription}
+                {this.props.experiment?.treatmentDescription} 
               </div>
               <div className="column">
                 <h5>Control</h5>
@@ -72,8 +77,8 @@ export class ExperimentDetails extends React.Component<IProps, IState> {
               </div>
             </div>
 
-            {!!this.props.experiment?.metricsControl &&
-              !!this.props.experiment.metricsTreatment && (
+            {!!this.props.experiment?.controlMetrics &&
+              !!this.props.experiment.treatmentMetrics && (
                 <div className="graph">
                   <XYPlot xType="ordinal" width={850} height={250}>
                     <HorizontalGridLines />
@@ -81,13 +86,13 @@ export class ExperimentDetails extends React.Component<IProps, IState> {
                     <LineMarkSeries
                       curve={"curveMonotoneX"}
                       data={transformMetricToGraph(
-                        this.props.experiment.metricsTreatment
+                        this.props.experiment.treatmentMetrics
                       )}
                     />
                     <LineMarkSeries
                       curve={"curveMonotoneX"}
                       data={transformMetricToGraph(
-                        this.props.experiment.metricsControl
+                        this.props.experiment.controlMetrics
                       )}
                     />
                     <XAxis />
@@ -102,12 +107,12 @@ export class ExperimentDetails extends React.Component<IProps, IState> {
           {
             this.props.experiment?.recommendations?.map(x => (
             <nav className="panel">
-              <p className="panel-heading">{x.explanation}</p>
+              <p className="panel-heading">we</p>
               <div className="panel-block">
-                Average value in Treatment: {x.avgTreatment}
+                Average value in Treatment: {x.treatmentAverage}
               </div>
               <div className="panel-block">
-                Average value in Control: {x.avgControl}
+                Average value in Control: {x.controlAverage}
               </div>
               <div className="panel-block">
                 p-Value: {x.pValue}

@@ -4,17 +4,10 @@ export default function getMetrics(): Metric[] {
     let metrics: Metric[] = [];
 
     metrics.push({
-        name: "Weight",
-        unitValue: "Kilograms",
-        values: [],
+        name: "weight",
+        unitValue: "kilograms",
+        metricValues: [],
         lessIsBetter: true
-    });
-
-    metrics.push({
-        name: "Mood",
-        unitValue: "Stars",
-        values: [],
-        lessIsBetter: false
     });
 
     return metrics;

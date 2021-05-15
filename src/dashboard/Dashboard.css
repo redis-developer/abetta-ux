@@ -4,9 +4,9 @@
 }
 
 .card:hover {
-  box-shadow: 0 0px 10px rgba(100, 221, 30, 0.685);
+  box-shadow: 0 0px 10px rgba(59, 59, 59, 0.685);
 }
 
 .card.is-selected {
-  box-shadow: 0 0px 5px rgba(111, 204, 58, 0.685);
+  box-shadow: 0 0px 5px  rgba(20, 20, 20, 0.685);
 }

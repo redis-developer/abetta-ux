@@ -6,7 +6,7 @@ export function Home() {
   const authService = new AuthenticationService();
 
   const testing = async () => {
-    await authService.testCall();
+    await authService.xpCall();
     alert("Hey");
   };
 
@@ -35,7 +35,7 @@ export function Home() {
       <div className="App">
         <header className="App-header">
           <p>ABetta-Me App</p>
-          <a href="http://localhost:8080/oauth2/authorization/google">Login</a>
+          <a href="http://localhost:8080/login">Login</a>
           <a onClick={authTest}>Login axios</a>
           <a onClick={testing}>Test</a>
         </header>

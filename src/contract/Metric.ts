@@ -1,6 +1,8 @@
+export interface MetricValue {dateRecorded: Date, value: number}
+
 export default interface Metric {
     name: string;
     unitValue: string;
-    values: {date: Date, value: number}[];
+    metricValues: MetricValue[];
     lessIsBetter?: boolean;
 }

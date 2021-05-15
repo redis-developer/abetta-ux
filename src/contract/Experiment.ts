@@ -5,14 +5,14 @@ export interface Experiment {
     id: string;
     name: string;
     dateCreated?: Date;
-    description: string;
     controlDescription?: string;
     treatmentDescription?: string;
     dateCompleted?: Date;
     status?: Status,
     isSelected?: boolean;
-    metricsControl?: Metric[];
-    metricsTreatment?: Metric[];
+	experimentMetrics?: Metric[];
+    controlMetrics?: Metric[];
+    treatmentMetrics?: Metric[];
     recommendations?: Recommendation[];
 }
 

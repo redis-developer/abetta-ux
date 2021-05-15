@@ -19,10 +19,10 @@ function App() {
         <Router>
           <Switch>
             <Route path="/dashboard" exact component={Dashboard} />
-            <Route path="/help" exact component={HelpPage} />
+            <Route path="/about" exact component={HelpPage} />
             <Route path="/wizard" exact component={Wizard} />
             <Route path="/addMetric" exact component={AddMetric} />
-            <Route path="/" exact component={Home} />
+            <Route path="/" exact component={Dashboard} />
           </Switch>
         </Router>
       </div>

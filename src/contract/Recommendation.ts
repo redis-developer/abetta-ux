@@ -1,7 +1,6 @@
 
 export default interface Recommendation {
-    avgControl: number;
-    avgTreatment: number;
+    controlAverage: number;
+    treatmentAverage: number;
     pValue: number;
-    explanation: string;
 }

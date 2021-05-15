@@ -7,7 +7,7 @@ export class AuthenticationService {
 	  }
 
 	async  authenticateWithGoogle() {
-		await axios.get("http://localhost:8080/oauth2/authorization/google", {
+		await axios.get("http://localhost:8080/login", {
 			withCredentials: true
 		});
 	}

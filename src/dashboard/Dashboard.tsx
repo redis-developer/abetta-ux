@@ -1,5 +1,5 @@
 import "./Dashboard.css";
-import { default as getExperiments } from "../services/ExperimentService";
+import { getExperiments, getInMemoryExperiments } from "../services/ExperimentService";
 import { ExperimentDetails } from "./ExperimentDetails";
 import React from "react";
 import { Experiment } from "../contract/Experiment";
@@ -41,9 +41,11 @@ class Dashboard extends React.Component<IProps, IState> {
 
 	componentDidMount() {
 		let response = getExperiments();
+		
 		response.then((experiments: Experiment[]) => {
+			let inMemoryExp = getInMemoryExperiments();
 			this.setState({
-				experiments: experiments,
+				experiments: experiments.concat(inMemoryExp),
 				selectedExperiment: experiments[0]
 			});
 		})
