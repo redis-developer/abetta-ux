@@ -1,0 +1,23 @@
+{
+    "app_name": "ABettaMe",
+    "description": "App to perform experiments and track significance",
+    "hidden": "true",
+    "rank": "34",
+    "type": "Full App",
+    "contributed_by": "Community",
+    "repo_url": "https://github.com/ABettaMe",
+    "download_url": "https://github.com/ABettaMe/abetta-ux/archive/refs/heads/master.zip",
+    "hosted_url": "https://abetta-gw.herokuapp.com/",
+    "quick_deploy": "",
+    "deploy_buttons": [],
+    "language": ["TypeScript, Java, C#"],
+    "redis_commands": [""],
+    "redis_features": [""],
+    "redis_modules": ["RedisJSON", "Redis Pub/Sub"],
+    "app_image_urls": [
+    ],
+    "youtube_url": "",
+    "special_tags": ["Hackathon"],
+    "verticals": ["Healthcare", "Technology"],
+    "markdown": "https://github.com/ABettaMe/abetta-ux/blob/master/README.md"
+}
