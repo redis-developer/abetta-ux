@@ -44,9 +44,10 @@ class Dashboard extends React.Component<IProps, IState> {
 		
 		response.then((experiments: Experiment[]) => {
 			let inMemoryExp = getInMemoryExperiments();
+			let reversedExp = experiments.concat(inMemoryExp).reverse();
 			this.setState({
-				experiments: experiments.concat(inMemoryExp),
-				selectedExperiment: experiments[0]
+				experiments: reversedExp,
+				selectedExperiment: reversedExp[0]
 			});
 		})
 	}
