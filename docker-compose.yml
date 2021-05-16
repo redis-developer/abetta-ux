@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  abetta-xp:
+    container_name: abetta-xp
+    image: abettame/abetta-xp:local
+  abetta-gateway:
+    container_name: abetta-gateway
+    image: abettame/abetta-gateway:local
+    ports:
+      - 8080:8080
+  abetta-rec:
+    container_name: abetta-rec
+    image: abettame/abetta-rec:local
+  abetta-portal:
+    container_name: abetta-portal
+    image: abettame/abetta-portal:local
+    ports:
+      - 3000:3000

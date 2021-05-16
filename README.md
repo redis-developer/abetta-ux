@@ -17,6 +17,17 @@ Through our microservices architecture, the frontend first notifies the backend 
 The user can then identify if the changes are indeed having an impact on their desired metrics.
 We hope that you liked our hack! Stay safe!
 
+## Running the App
+
+### Locally
+
+- `docker-compose up -d`
+- Open a browser & hit `http://localhost:8080/`
+
+### Web Deployment
+
+- Open a browser & hit `https://abetta-gw.herokuapp.com/`
+
 ## Modules
 
 ### ABettaMe Dashboard
