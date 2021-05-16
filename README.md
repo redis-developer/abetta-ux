@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# ABettaMe
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract
 
-## Available Scripts
+Why settle when you can always be better? 
 
-In the project directory, you can run:
+ABettaMe helps you perform experiments about things you want to change in your life. It does so, by tracking metrics & analysing provided values to tell you if there's a statistically significant difference between your control & treatment groups.
 
-### `yarn start`
+## Modules
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### ABettaMe Dashboard
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+UI interface to manage existing experiments, or record new ones.
 
-### `yarn test`
+Technologies used: TypeScript, React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Repo link: [abetta-ux](https://github.com/ABettaMe/abetta-ux)
 
-### `yarn build`
+### ABettaMe Gateway
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Application gateway that routes traffic to appropriate downstream services.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Technologies used: Java, Spring Cloud Gateway
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Repo link: [abetta-gateway](https://github.com/ABettaMe/abetta-gateway)
 
-### `yarn eject`
+### ABettaMe Experiments
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Microservice holding all business logic around the creation and management of experiments.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Technologies used: Java, Spring Boot, RedisJSON, Redis Pub/Sub
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Repo link: [abetta-xp](https://github.com/ABettaMe/abetta-xp)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### ABettaMe Recommendation
 
-## Learn More
+Recommendation service that analyses experiments & performs statistical significance testing.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Technologies used: C#, .NET 5, RedisJSON, Redis Pub/Sub
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Repo link: [abetta-rec](https://github.com/ABettaMe/abetta-rec)
+
+## High-Level Overview of Application
+
+![ABettaMe App](abettame.png)
