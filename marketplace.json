@@ -1,15 +1,22 @@
 {
     "app_name": "ABettaMe",
-    "description": "App to perform experiments and track significance",
-    "hidden": "true",
-    "rank": "34",
-    "type": "Full App",
+    "description": "App to perform experiments and track significance using RedisJSON + Redis PubSub",
+    "rank": "130",
+    "type": "Building Block",
     "contributed_by": "Community",
-    "repo_url": "https://github.com/ABettaMe",
-    "download_url": "https://github.com/ABettaMe/abetta-ux/archive/refs/heads/master.zip",
+    "repo_url": "https://github.com/redis-developer/abetta-ux",
+    "download_url": "https://github.com/redis-developer/abetta-ux/archive/refs/heads/master.zip",
     "hosted_url": "https://abetta-gw.herokuapp.com/",
-    "quick_deploy": "",
-    "deploy_buttons": [],
+    "quick_deploy": "true",
+    "deploy_buttons": [
+        {
+            "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/abetta-ux.git" 
+        },
+        {
+            "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/abetta-ux.git" 
+        }
+    ],
+    
     "language": ["TypeScript, Java, C#"],
     "redis_commands": [""],
     "redis_features": [""],
@@ -19,5 +26,5 @@
     "youtube_url": "",
     "special_tags": ["Hackathon"],
     "verticals": ["Healthcare", "Technology"],
-    "markdown": "https://github.com/ABettaMe/abetta-ux/blob/master/README.md"
+    "markdown": "https://raw.githubusercontent.com/redis-developer/abetta-ux/blob/master/README.md"
 }
