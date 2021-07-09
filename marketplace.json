@@ -19,8 +19,8 @@
     
     "language": ["TypeScript, Java, C#"],
     "redis_commands": [""],
-    "redis_features": [""],
-    "redis_modules": ["RedisJSON", "Redis Pub/Sub"],
+    "redis_features": ["Pub/Sub"],
+    "redis_modules": ["RedisJSON"],
     "app_image_urls": [
     ],
     "youtube_url": "https://www.youtube.com/watch?v=4TfdCwvLKy4",
