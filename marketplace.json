@@ -2,12 +2,13 @@
     "app_name": "ABettaMe",
     "description": "App to perform experiments and track significance using RedisJSON + Redis PubSub",
     "rank": "130",
+    "hidden": "true",
     "type": "Building Block",
     "contributed_by": "Community",
     "repo_url": "https://github.com/redis-developer/abetta-ux",
     "download_url": "https://github.com/redis-developer/abetta-ux/archive/refs/heads/master.zip",
     "hosted_url": "https://abetta-gw.herokuapp.com/",
-    "quick_deploy": "true",
+    "quick_deploy": "false",
     "deploy_buttons": [
         {
             "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/abetta-ux.git" 
