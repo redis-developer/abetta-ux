@@ -24,7 +24,7 @@
     "redis_modules": ["RedisJSON"],
     "app_image_urls": [
     ],
-    "youtube_url": "https://www.youtube.com/watch?v=4TfdCwvLKy4",
+    "youtube_url": "https://www.youtube.com/watch?v=8rIUB4B2_gE",
     "special_tags": ["Hackathon"],
     "verticals": ["Healthcare", "Technology"],
     "markdown": "https://raw.githubusercontent.com/redis-developer/abetta-ux/master/README.md"
