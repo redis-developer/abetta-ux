@@ -7,7 +7,7 @@
     "repo_url": "https://github.com/redis-developer/abetta-ux",
     "preview_image_url": "https://raw.githubusercontent.com/redis-developer/abetta-ux/master/images/app_preview_image.png",
     "download_url": "https://github.com/redis-developer/abetta-ux/archive/refs/heads/master.zip",
-    "hosted_url": "https://abetta-gw.herokuapp.com/",
+    "hosted_url": "",
     "quick_deploy": "false",
     "deploy_buttons": [
         {
