@@ -24,9 +24,6 @@ We hope that you liked our hack! Stay safe!
 - `docker-compose up -d`
 - Open a browser & hit `http://localhost:8080/`
 
-### Web Deployment
-
-- Open a browser & hit `https://abetta-gw.herokuapp.com/`
 
 ## Modules
 
@@ -36,7 +33,7 @@ UI interface to manage existing experiments, or record new ones.
 
 Technologies used: TypeScript, React
 
-Repo link: [abetta-ux](https://github.com/ABettaMe/abetta-ux)
+Repo link: [abetta-ux](https://github.com/redis-developer/abetta-ux)
 
 ### ABettaMe Gateway
 
@@ -44,7 +41,7 @@ Application gateway that routes traffic to appropriate downstream services.
 
 Technologies used: Java, Spring Cloud Gateway
 
-Repo link: [abetta-gateway](https://github.com/ABettaMe/abetta-gateway)
+Repo link: [abetta-gateway](https://github.com/redis-developer/abetta-gateway)
 
 ### ABettaMe Experiments
 
@@ -52,7 +49,7 @@ Microservice holding all business logic around the creation and management of ex
 
 Technologies used: Java, Spring Boot, RedisJSON, Redis Pub/Sub
 
-Repo link: [abetta-xp](https://github.com/ABettaMe/abetta-xp)
+Repo link: [abetta-xp](https://github.com/redis-developer/abetta-xp)
 
 ### ABettaMe Recommendation
 
@@ -60,7 +57,7 @@ Recommendation service that analyses experiments & performs statistical signific
 
 Technologies used: C#, .NET 5, RedisJSON, Redis Pub/Sub
 
-Repo link: [abetta-rec](https://github.com/ABettaMe/abetta-rec)
+Repo link: [abetta-rec](https://github.com/redis-developer/abetta-rec)
 
 ### ABettaMe Contract
 
@@ -68,7 +65,7 @@ Repository holding all contracts shared between different services.
 
 Technologies used: Google Protocol Buffers
 
-Repo link: [abetta-contract](https://github.com/ABettaMe/abetta-contract)
+Repo link: [abetta-contract](https://github.com/redis-developer/abetta-contract)
 
 ## High-Level Overview of Application
 
