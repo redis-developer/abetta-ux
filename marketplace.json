@@ -1,7 +1,7 @@
 {
     "app_name": "ABettaMe",
     "description": "App to perform experiments and track significance using RedisJSON + Redis PubSub",
-    "rank": "480",
+    "rank": 107,
     "type": "Building Block",
     "contributed_by": "Community",
     "repo_url": "https://github.com/redis-developer/abetta-ux",
