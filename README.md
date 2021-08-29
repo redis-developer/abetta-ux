@@ -8,7 +8,7 @@ ABettaMe helps you perform experiments about things you want to change in your l
 
 ## Description
 
-Hi! We are Pavlos and Antonis and we are the creators of AbettaMe, a fun app we have created for the [Redis Hackathon](https://redislabs.com/hackathon-2021/).
+
 
 ABettaMe is a great way to measure the effects of positive changes on your lifestyle. We all come across multiple studies about the effects of certain diets or lifestyle changes, but we often have no way to measure the effect of them on our lives. Through our app, users can perform experiments on themselves, by separating their days into control and treatment. 
 
