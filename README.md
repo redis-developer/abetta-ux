@@ -1,13 +1,11 @@
 # ABettaMe
 
-## Abstract
 
 Why settle when you can always be better? 
 
 ABettaMe helps you perform experiments about things you want to change in your life. It does so, by tracking metrics & analysing provided values to tell you if there's a statistically significant difference between your control & treatment groups.
 
 ## Description
-
 
 
 ABettaMe is a great way to measure the effects of positive changes on your lifestyle. We all come across multiple studies about the effects of certain diets or lifestyle changes, but we often have no way to measure the effect of them on our lives. Through our app, users can perform experiments on themselves, by separating their days into control and treatment. 
