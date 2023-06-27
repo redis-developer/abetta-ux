@@ -1,6 +1,6 @@
 {
     "app_name": "ABettaMe",
-    "description": "App to perform experiments and track significance using RedisJSON + Redis PubSub",
+    "description": "App to perform experiments and track significance using Redis features like JSON and PubSub",
     "rank": 107,
     "type": "Building Block",
     "contributed_by": "Community",
@@ -11,21 +11,31 @@
     "quick_deploy": "false",
     "deploy_buttons": [
         {
-            "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/abetta-ux.git" 
+            "heroku": "https://heroku.com/deploy?template=https://github.com/redis-developer/abetta-ux.git"
         },
         {
-            "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/abetta-ux.git" 
+            "Google": "https://deploy.cloud.run/?git_repo=https://github.com/redis-developer/abetta-ux.git"
         }
     ],
-    
-    "language": ["TypeScript, Java, C#"],
-    "redis_commands": [""],
-    "redis_features": ["Pub/Sub"],
-    "redis_modules": ["RedisJSON"],
-    "app_image_urls": [
+    "language": [
+        "TypeScript, Java, C#"
     ],
+    "redis_commands": [
+        ""
+    ],
+    "redis_use_cases": [
+        "Pub/Sub"
+    ],
+    "redis_features": [
+        "JSON"
+    ],
+    "app_image_urls": [],
     "youtube_url": "https://www.youtube.com/watch?v=8rIUB4B2_gE",
-    "special_tags": ["Hackathon"],
-    "verticals": ["Others"],
+    "special_tags": [
+        "Hackathon"
+    ],
+    "verticals": [
+        "Others"
+    ],
     "markdown": "https://raw.githubusercontent.com/redis-developer/abetta-ux/master/README.md"
 }
