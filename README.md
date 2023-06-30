@@ -1,16 +1,16 @@
 # ABettaMe
 
 
-Why settle when you can always be better? 
+Why settle when you can always be better?
 
 ABettaMe helps you perform experiments about things you want to change in your life. It does so, by tracking metrics & analysing provided values to tell you if there's a statistically significant difference between your control & treatment groups.
 
 ## Description
 
 
-ABettaMe is a great way to measure the effects of positive changes on your lifestyle. We all come across multiple studies about the effects of certain diets or lifestyle changes, but we often have no way to measure the effect of them on our lives. Through our app, users can perform experiments on themselves, by separating their days into control and treatment. 
+ABettaMe is a great way to measure the effects of positive changes on your lifestyle. We all come across multiple studies about the effects of certain diets or lifestyle changes, but we often have no way to measure the effect of them on our lives. Through our app, users can perform experiments on themselves, by separating their days into control and treatment.
 
-Through our microservices architecture, the frontend first notifies the backend for any new metrics, which are saved in Redis JSON store. New metrics are also published through Redis PubSub module and a recommendations microservice analyses the data and performs significance testing.
+Through our microservices architecture, the frontend first notifies the backend for any new metrics, which are saved in Redis JSON store. New metrics are also published through Redis PubSub and a recommendations microservice analyses the data and performs significance testing.
 
 The user can then identify if the changes are indeed having an impact on their desired metrics.
 We hope that you liked our hack! Stay safe!
@@ -45,7 +45,7 @@ Repo link: [abetta-gateway](https://github.com/redis-developer/abetta-gateway)
 
 Microservice holding all business logic around the creation and management of experiments.
 
-Technologies used: Java, Spring Boot, RedisJSON, Redis Pub/Sub
+Technologies used: Java, Spring Boot, Redis JSON, Redis Pub/Sub
 
 Repo link: [abetta-xp](https://github.com/redis-developer/abetta-xp)
 
@@ -53,7 +53,7 @@ Repo link: [abetta-xp](https://github.com/redis-developer/abetta-xp)
 
 Recommendation service that analyses experiments & performs statistical significance testing.
 
-Technologies used: C#, .NET 5, RedisJSON, Redis Pub/Sub
+Technologies used: C#, .NET 5, Redis JSON, Redis Pub/Sub
 
 Repo link: [abetta-rec](https://github.com/redis-developer/abetta-rec)
 
